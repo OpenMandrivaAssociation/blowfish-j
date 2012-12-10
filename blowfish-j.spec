@@ -60,3 +60,19 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_javadocdir}/%{name}-%{version}
 %{_javadocdir}/%{name}-%{version}/*
 %dir %{_javadocdir}/%{name}
+
+
+%changelog
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 0:2.15-0.0.4mdv2011.0
++ Revision: 616779
+- the mass rebuild of 2010.0 packages
+
+* Wed Sep 02 2009 Thierry Vignaud <tv@mandriva.org> 0:2.15-0.0.3mdv2010.0
++ Revision: 424662
+- rebuild
+
+* Sat Feb 23 2008 Alexander Kurtakov <akurtakov@mandriva.org> 0:2.15-0.0.2mdv2008.1
++ Revision: 174087
+- import blowfish-j
+
+

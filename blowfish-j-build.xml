@@ -1,0 +1,56 @@
+<project name="blowfish-j" default="dist" basedir=".">
+
+ <description>
+  Jpackage build file for blowfish-j
+ </description>
+
+ <property name="src" location="src/java"/>
+ <property name="build" location="build"/>
+ <property name="dist" location="dist"/>
+
+ <target name="init">
+  <tstamp/>
+  <mkdir dir="${src}"/>
+  <mkdir dir="${build}"/>
+<!--
+  <copy todir="${src}">
+   <fileset dir="BlowfishJ">
+    <exclude name="test/*.java"/>
+   </fileset>
+  </copy>
+-->
+ </target>
+
+ <target name="compile" depends="init" description="Compilation">
+  <javac srcdir="${src}" destdir="${build}" source="1.4" target="1.4" />
+ </target>
+
+ <target name="dist" depends="compile">
+  <mkdir dir="${dist}/lib"/>
+  <jar jarfile="${dist}/lib/blowfish-j.jar"
+   basedir="${build}" excludes="net/sourceforge/blowfishj/test/*.class" />
+  <jar jarfile="${dist}/lib/blowfish-j-test.jar"
+   basedir="${build}" includes="net/sourceforge/blowfishj/test/*.class" />
+ </target>
+
+ <target name="javadoc" >
+  <mkdir dir="${dist}/javadoc"/>
+  <javadoc
+   destdir="${dist}/javadoc"
+   author="true"
+   version="true"
+   use="true"
+   windowtitle="BlowfishJ API">
+   <fileset dir="${src}" defaultexcludes="yes">
+   </fileset>
+  </javadoc>
+ </target>
+
+ <target name="clean" description="clean up" >
+  <!-- Delete the ${build} and ${dist} directory trees -->
+  <delete dir="${build}"/>
+  <delete dir="${dist}"/>
+ </target>
+
+</project>
+
