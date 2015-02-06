@@ -1,6 +1,6 @@
 Name:		blowfish-j
 Version:	2.15
-Release:	%mkrel 0.0.4
+Release:	0.0.5
 Epoch:		0
 Summary:	A Blowfish implementation in Java
 License:	Apache License
