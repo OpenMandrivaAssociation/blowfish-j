@@ -4,7 +4,7 @@ Release:	0.0.5
 Epoch:		0
 Summary:	A Blowfish implementation in Java
 License:	Apache License
-Url: 		http://www.lassekolb.info/bfacs.htm
+Url: 		https://www.lassekolb.info/bfacs.htm
 Source0:	http://www.lassekolb.info/bfj215.zip
 Source1:	%{name}-build.xml
 BuildRequires:	ant
